@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>Train your dragon NOW!</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'CSS/main_style.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Chonburi&family=Pirata+One&display=swap" type="text/css">
+        <link rel="shortcut icon" type="image/ico" href="{% static 'favicon.ico' %}">
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Train your dragon App</a></h1>
+            <p style="color: red; background: transparent">Now it's just a blog, but soon it will be something else, something better I guess...</p>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

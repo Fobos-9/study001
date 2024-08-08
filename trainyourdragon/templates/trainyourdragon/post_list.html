@@ -1,22 +1,14 @@
-{% load static %}
-<html>
-    <head>
-        <title>Train your dragon NOW!</title>
-        <link rel="shortcut icon" type="image/ico" href="{% static '/favicon.ico' %}">
-    </head>
+{% extends 'trainyourdragon/base.html' %}
 
-    <body>
-        <div>
-            <h1><a href="/">Train your dragon App</a></h1>
-            <p style="color: red; background: transparent">Now it's just a blog but soon it will be something else, something better I guess...</p>
-        </div>
-        {% for post in posts %}
-            <div>
+{% block content %}
+    {% for post in posts %}
+        {{ post }}
+        <div class="post">
+            <div class="date">
                 <p>Published: {{ post.published_date }}</p>
-                <a href="">{{ post.title }}</a>
-                <p>{{ post.text }}</p>
             </div>
-            {{ post }}
-        {% endfor %}
-    </body>
-</html>
+            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+            <p>{{ post.text }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
