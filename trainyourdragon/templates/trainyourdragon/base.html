@@ -11,6 +11,9 @@
 
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="/">Train your dragon App</a></h1>
             <p style="color: red; background: transparent">Now it's just a blog, but soon it will be something else, something better I guess...</p>
         </div>
