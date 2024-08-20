@@ -4,11 +4,12 @@
 }
 
 body {
-    background-color: #deb11f;
+    background-color: #deb120;
 }
 
 .page-header {
     background-color: #000000;
+    border: #000000;
     margin-top: 30px;
     padding: 20px 20px 20px 40px;
 }
@@ -23,6 +24,7 @@ body {
 .content {
     margin-left: 40px;
     border: 4px ridge rgb(80, 160, 80);
+    border-radius: 10px;
     padding: 10px 20px;
 }
 
@@ -31,12 +33,13 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    margin-left: 75%;
+    <!--margin-left: 75%;-->
+    float: right;
     color: #454016;
 }
 
 .save {
-    margin-left: 140%;
+    <!--margin-left: 140%;-->
     width: 89px;
     height: 52px;
     background: #000000;
@@ -46,14 +49,17 @@ h1, h2, h3, h4 {
 }
 
 .edit {
-    margin-left: 97%;
-    width: 40px;
-    height: 30px;
+    width: 45px;
+    height: 35px;
+    border: #000000;
     background: #000000;
+    font-size: 14pt;
+    margin-right: 5px;
 }
 
 .post-form textarea, .post-form input {
-    width: 152%;
+    <!--width: 152%;-->
+    width: 100%;
     background: rgba(255,255,255,0.5);
 }
 
@@ -64,18 +70,49 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
+.post p {
     font-family: 'Chonburi';
-    width: 152%;
+    <!--width: 152%;-->
+    width: 100%;
     margin-bottom: 30px;
     text-align: justify;
     color: #1a401a;
+}
+
+.post_header {
+    font-family: 'Pirata One';
+    font-size: 20pt;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
 
+.post-header {
+    display: flex;
+    float: right;
+}
+
 .glyphicon {
     color: #ff0000;
+}
+
+.publish {
+    width: 80px;
+    height: 35px;
+    border: #000000;
+    background: #000000;
+    color: #ff0000;
+    font-family: 'Drakon';
+    font-size: 14pt;
+    margin-right: 5px;
+}
+
+.delete {
+    width: 45px;
+    height: 35px;
+    border: #000000;
+    background: #000000;
+    color: #ff0000;
+    font-size: 14pt;
 }

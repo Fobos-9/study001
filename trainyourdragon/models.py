@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
-##from .views import currentuser
 
 
 class Post(models.Model):
@@ -12,7 +11,6 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
-        ##self.author = currentuser
         self.published_date = timezone.now()
         self.save()
 
