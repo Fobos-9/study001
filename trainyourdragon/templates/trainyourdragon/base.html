@@ -12,10 +12,17 @@
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                <form method="post" action="{% url 'logout' %}" class="top-menu" title="Sign out">{% csrf_token %}
+                    <button type="submit" class="sign-out"><span class="glyphicon glyphicon-log-out"></span></button>
+                </form>
+                <!--<a href="{% url 'logout' %}" class="top-menu" title="Sign out"><span class="glyphicon glyphicon-log-out"></span></a>-->
+                <a href="{% url 'post_new' %}" class="top-menu" title="New post"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu" title="Drafts"><span class="glyphicon glyphicon-edit"></span></a>
+                <p class="greetings">Hello {{ user.username }}!</p>
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu" title="Sign in"><span class="glyphicon glyphicon-log-in"></span></a>
             {% endif %}
-            <h1><a href="/">Train your dragon App</a></h1>
+            <h1><a href="/trainyourdragon">Train your dragon App</a></h1>
             <p style="color: red; background: transparent">Now it's just a blog, but soon it will be something else, something better I guess...</p>
         </div>
         <div class="content container">

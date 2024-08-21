@@ -9,15 +9,15 @@
                 </div>
             {% else %}
                 <form method="POST" action="{% url 'post_publish' pk=post.pk %}" class="post-form">{% csrf_token %}
-                    <button type="submit" class="publish btn btn-info" name="publish">Publish</button>
+                    <button type="submit" class="publish btn btn-info" name="publish" title="Publish">Publish</button>
                 </form>
             {% endif %}
             {% if user.is_authenticated %}
-                <a class="edit btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
+                <a class="edit btn btn-default" href="{% url 'post_edit' pk=post.pk %}" title="Edit">
                     <span class="glyphicon glyphicon-pencil"></span>
                 </a>
                 <form method="POST" action="{% url 'post_remove' pk=post.pk %}" class="post-form">{% csrf_token %}
-                    <button type="submit" class="delete btn btn-danger" name="delete">
+                    <button type="submit" class="delete btn btn-danger" name="delete" title="Delete">
                         <span class="glyphicon glyphicon-remove"></span>
                     </button>
                 </form>

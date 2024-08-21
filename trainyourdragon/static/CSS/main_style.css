@@ -33,19 +33,20 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    <!--margin-left: 75%;-->
+    <!--margin-left: 75%;
     float: right;
     color: #454016;
 }
 
 .save {
-    <!--margin-left: 140%;-->
-    width: 89px;
-    height: 52px;
+    <!--margin-left: 140%;
+    width: 75px;
+    height: 35px;
     background: #000000;
     color: #ff0000;
     font-family: 'Drakon';
-    font-size: 20pt;
+    font-size: 14pt;
+    float: right;
 }
 
 .edit {
@@ -55,10 +56,11 @@ h1, h2, h3, h4 {
     background: #000000;
     font-size: 14pt;
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 .post-form textarea, .post-form input {
-    <!--width: 152%;-->
+    <!--width: 152%;
     width: 100%;
     background: rgba(255,255,255,0.5);
 }
@@ -68,11 +70,12 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    margin-top: 4px;
 }
 
 .post p {
     font-family: 'Chonburi';
-    <!--width: 152%;-->
+    <!--width: 152%;
     width: 100%;
     margin-bottom: 30px;
     text-align: justify;
@@ -105,7 +108,6 @@ h1, h2, h3, h4 {
     color: #ff0000;
     font-family: 'Drakon';
     font-size: 14pt;
-    margin-right: 5px;
 }
 
 .delete {
@@ -115,4 +117,17 @@ h1, h2, h3, h4 {
     background: #000000;
     color: #ff0000;
     font-size: 14pt;
+}
+
+.greetings {
+    float: right;
+    color: #ff0000;
+    font-family: 'Drakon';
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.sign-out {
+    background: #000000;
+    border: none;
 }
