@@ -11,7 +11,10 @@ def post_list(request):
 
 
 def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+    try:
+        post = get_object_or_404(Post, pk=pk)
+    except Exception as ex:
+        return render(request, 'system/error_404_page.html')
     return render(request, 'trainyourdragon/post_detail.html', {'post': post})
 
 
@@ -64,3 +67,7 @@ def post_remove(request, pk):
     if request.method == 'POST':
         post.delete()
     return redirect('post_list')
+
+
+def error_404(request, exception):
+    return render(request, 'system/error_404_page.html')

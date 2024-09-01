@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler404
 from django.contrib.auth import views
 
 urlpatterns = [
+    path('', include('trainyourdragon.urls')),
     path('admin/', admin.site.urls),
     path('trainyourdragon/', include('trainyourdragon.urls')),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(next_page='/trainyourdragon'), name='logout'),
 ]
+
+handler404 = 'trainyourdragon.views.error_404'

@@ -1,0 +1,9 @@
+{% extends 'trainyourdragon/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="error_404_message">
+        <p>This page can't be displayed because it doesn't exist. But you always can <a href="/trainyourdragon"><strong>return to the main page</strong></a>.</p>
+        <p><img src="{% static 'images/error_404.png' %}"></p>
+    </div>
+{% endblock %}

@@ -131,3 +131,9 @@ h1, h2, h3, h4 {
     background: #000000;
     border: none;
 }
+
+.error_404_message{
+    color: #ff0000;
+    font-family: 'Drakon';
+    font-size: 26pt;
+}

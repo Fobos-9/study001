@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>Train your dragon NOW!</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'CSS/main_style.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" type="text/css">
+        <link rel="stylesheet" href="{% static 'CSS/main_style.css' %}" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Chonburi&family=Pirata+One&display=swap" type="text/css">
         <link rel="shortcut icon" type="image/ico" href="{% static 'favicon.ico' %}">
     </head>
@@ -15,7 +15,6 @@
                 <form method="post" action="{% url 'logout' %}" class="top-menu" title="Sign out">{% csrf_token %}
                     <button type="submit" class="sign-out"><span class="glyphicon glyphicon-log-out"></span></button>
                 </form>
-                <!--<a href="{% url 'logout' %}" class="top-menu" title="Sign out"><span class="glyphicon glyphicon-log-out"></span></a>-->
                 <a href="{% url 'post_new' %}" class="top-menu" title="New post"><span class="glyphicon glyphicon-plus"></span></a>
                 <a href="{% url 'post_draft_list' %}" class="top-menu" title="Drafts"><span class="glyphicon glyphicon-edit"></span></a>
                 <p class="greetings">Hello {{ user.username }}!</p>
